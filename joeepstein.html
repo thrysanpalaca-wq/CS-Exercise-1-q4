@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id = num1></p>
+    <p id = num2></p>
+    <p id = num3></p>
+    <p id = num4></p>
+    <p id = num5></p> 
+    <p id = num6></p>
+    <p id = num7></p>
+
+    <script>
+        /* 1️⃣ School Event Entry Check
+        let id = prompt("R u wearing thy id? (yes/no)");
+
+        if(id.toLowerCase == "yes") {
+        num1.innerHTML = "Welcome to the event!";
+        } else {
+             num1.innerHTML = "Pls show thy ID.";
+        } 
+        
+        */
+        /*
+        //2️⃣ Jeepney Fare Discount
+        let fare = prompt("You a student? yes/nah");
+        let fare2 = prompt("Ya an oldie? yes/nah)");
+
+        if(fare.toLowerCase == "yes" || fare2.toLowerCase == "yes") {
+            num2.innerHTML = "You get a discounted fare.";
+        } else {
+            num2.innerHTML = "You will pay regular fare.";
+        }
+        */
+        /*
+        //3️⃣ Quiz Grade Evaluator
+        let grade = prompt("Input your grade"); 
+
+        if(grade >= 90 && grade <= 100) {
+            num3.innerHTML = "Excellent";
+        } else if(grade <= 101) {
+             num3.innerHTML = "Invalid score";
+        } else if(grade >= 75 && grade < 90) {
+            num3.innerHTML = "Good job";
+        } else if(grade >= 60 && grade < 75) {
+            num3.innerHTML = "You passed";
+        } else if(grade >= 1 && grade > 60) {
+            num3.innerHTML = "You need to review";
+        } else {
+            num3.innerHTML = "Invalid score";
+        }
+        */ 
+       
+        //4️⃣ Data Promo Select 
+         let promo = prompt("Choose your Data Promo: (A/B/C)");
+        promo = promo.toUpperCase();
+        switch (promo){
+            case "A":
+                num4.innerHTML="Congratulations! Enjoy your 1GB for 1 day";
+                break;
+            case "B":
+                num4.innerHTML="Congratulations! Enjoy your 5GB for 7 days";
+                break;
+            case "C":
+                num4.innerHTML="Congratulations! Enjoy your 10GB for 30 days";
+                break;
+            default:
+                num4.innerHTML="Invalid Choice.";
+                break;
+        }
+        
+
+    //5️⃣ Vowel Counter in Your Name
+        let name = prompt("Enter your Full Name:");
+        num5.innerHTML = name;
+        name = name.toLowerCase();
+        let count = 0
+        for (let i = 0; i < name.length; i++) {
+            if (name[i]==='a'||name[i]==='e'||name[i]==='i'||name[i]==='o'||name[i]==='u'){
+                count++;
+            }
+        }
+        num5.innerHTML="Your name contains " + count + " vowel/s.";
+       
+    //6️⃣ Username Validator
+        let username = prompt("Enter your Username (Must contain atleast 6 characters): ");
+        num6.innerHTML = username;
+        let hasSpace = false;
+        for (let i = 0; i < username.length; i++) {
+        if (username[i]===" "){
+        hasSpace=true;
+        break;
+        }
+        }
+        if (username.length < 6){
+            num6.innerHTML="Username must be atleast 6 characters.";
+        } else if (hasSpace) {
+            num6.innerHTML="Username must not contain any spaces.";
+        } else {
+            num6.innerHTML="Valid username.";
+        }
+
+
+    //7️⃣ Secure Login System
+        let attempts = 0;
+        let key = "";
+        while (attempts < 3){
+            let pass = prompt("Enter a Password:","KEY");
+            num7.innerHTML = pass;
+            if (pass === "Grade9JS"){
+                key = "Login Successful!";
+                num7.innerHTML = key;
+                break;}
+            else{
+                attempts++;
+                if(attempts === 3) {
+                    key= "Account Locked.";
+                    num7.innerHTML = key;
+                }else{
+                    alert("Incorrect Password Please Try Again. ( Attempts = " + attempts + "/3 )");}}}
+       
+           
+        
+    </script>
+</body>
+</html>
